@@ -1,0 +1,37 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form>
+            Enter water you want  <input type="text" id="water" text="in Litres"><br><br>
+            <button onclick="billCalculate()">calculate</button>
+            <p id="solution"></p>
+        </form>
+    </body>
+        <script>
+            
+            function billCalculate() {
+            let water=document.getElementById("water").value;
+            let ans;
+            if(water>0){
+                if(water<15){
+                ans=50+(water*2);
+                }
+                else if(water <35){
+                ans=50+(15*2)+(water-15)*5;
+                }
+                else{
+                    ans=50+(15*2)+(20*5)+(water-35)*10;
+                }
+            //document.getElementById("solution").innerHTML=ans +"rs will be the cost";
+            document.write(ans +"rs will be the cost");
+            }
+            else{
+                //document.getElementById("solution").innerHTML="WATER CONSUMPTION IS LESS THAN 0 LITRES";
+                document.write("WATER CONSUMPTION IS LESS THAN 0 LITRES");
+            }
+    }
+        </script>
+    
+</htnml>
